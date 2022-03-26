@@ -28,7 +28,7 @@ app.post("/register",async (req, res) => {
             console.log(err.message)
             return res.send(err.message);
         }
-        // Display uploaded image for user validation
+        try{
         let {username,password} = req.body
         username = username?.trim()
         if(!username || !(/^(?=[a-zA-Z0-9._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/.test(username))){
@@ -57,7 +57,7 @@ app.post("/register",async (req, res) => {
         let avatar = req.file ? path.basename(req.file.path) : "default.png"
 
         let newUser = {
-            id: users.at(-1).id+1,
+            id: users.at(-1)?.id+1 || 1,
             username,
             password,
             avatar
@@ -70,6 +70,14 @@ app.post("/register",async (req, res) => {
             message:  newUser.username+"successfully added",
             id: newUser.id
         })
+        }
+        catch (e){
+            res.status(400).json({
+                ok:false,
+                message: "Error"
+            })
+        }
+        // Display uploaded image for user validation
     });
 })
 
