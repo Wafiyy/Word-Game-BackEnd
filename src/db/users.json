@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "username": "Abror",
+        "password": "123456",
+        "avatar": "default.png"
+    },
+    {
+        "id": 2,
+        "username": "Abror2",
+        "password": "123456",
+        "avatar": "default.png"
+    },
+    {
+        "id": 3,
+        "username": "Abror22",
+        "password": "123456",
+        "avatar": "default.png"
+    }
+]
