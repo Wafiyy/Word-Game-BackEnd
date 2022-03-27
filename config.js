@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 1000
+const PORT = process.env.PORT || 5050
 
 module.exports = {
     PORT

@@ -38,8 +38,16 @@ function write(fileName,data){
         throw error
     }
 }
+
+function reject(res,message="Error"){
+    return res.status(400).json({
+        ok: false,
+        message,
+    })
+}
 module.exports = {
     imageFilter,
     read,
-    write
+    write,
+    reject
 }
