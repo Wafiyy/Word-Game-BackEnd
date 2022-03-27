@@ -1,6 +1,7 @@
 const path = require("path")
 const fs = require("fs")
-
+const gameStatus = false
+const turn = 0
 const imageFilter = function(req, file, cb) {
     // Accept images only
     if (!file.originalname.match(/\.(jpg|jpeg|png)$/i)) {
@@ -49,5 +50,6 @@ module.exports = {
     imageFilter,
     read,
     write,
-    reject
+    reject,
+    gameStatus
 }

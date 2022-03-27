@@ -1,10 +1,9 @@
-const {read, reject} = require("../util");
+const {read, reject, gameStatus} = require("../util");
 
 function POST(req,res){
     let {username,password} = req.body
 
     let users = read("users")
-    console.log(username,password)
     if(!username || !(/^(?=[a-zA-Z0-9._]{3,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/.test(username))){
         return reject(res,"Invalid username")
     }
@@ -23,6 +22,7 @@ function POST(req,res){
     res.json({
         ok:"true",
         message:"ok",
+        gameStatus,
         data: user
     })
 

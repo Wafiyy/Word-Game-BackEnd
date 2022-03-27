@@ -40,5 +40,11 @@
         "username": "AbrorAli",
         "password": "123456",
         "avatar": "default.png"
+    },
+    {
+        "id": 8,
+        "username": "Abror2006",
+        "password": "123456",
+        "avatar": "avatar-1648383447329.jpg"
     }
 ]
