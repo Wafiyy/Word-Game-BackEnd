@@ -1,12 +1,26 @@
 [
     {
-        "id": 1,
-        "username": "Abror",
-        "avatar": "default.png"
-    },
-    {
         "id": 2,
         "username": "Abror2",
-        "avatar": "default.png"
+        "avatar": "default.png",
+        "playerId": 1
+    },
+    {
+        "id": 3,
+        "username": "Abror22",
+        "avatar": "default.png",
+        "playerId": 3
+    },
+    {
+        "id": 4,
+        "username": "Abror_2",
+        "avatar": "avatar-1648370278338.jpg",
+        "playerId": 4
+    },
+    {
+        "id": 5,
+        "username": "Abror4324",
+        "avatar": "avatar-1648376521665.jpg",
+        "playerId": 5
     }
 ]

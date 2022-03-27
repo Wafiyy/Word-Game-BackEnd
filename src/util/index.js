@@ -47,9 +47,10 @@ function reject(res,message="Error"){
     })
 }
 module.exports = {
-    imageFilter,
+    turn,
     read,
     write,
     reject,
-    gameStatus
+    gameStatus,
+    imageFilter
 }
