@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": 1,
+        "username": "Abror",
+        "password": "123456",
+        "avatar": "avatar-1648489907979.jpg"
+    },
+    {
+        "id": 2,
+        "username": "Mohina",
+        "password": "654321",
+        "avatar": "avatar-1648489958651.jpg"
+    }
+]

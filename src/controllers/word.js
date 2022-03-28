@@ -8,8 +8,8 @@ function POST(req,res){
     let lastLetter = words.at(-1)?.slice(-1)
     
     if( !word &&word === "") return reject(res, "please enter the word")
+    let game = read("game")
     if(lastLetter && lastLetter !== word.charAt(0)) {
-        let game = read("game")
         game = game.filter(el => el.id !== id)
         write("game",game)
         return reject(res,"Invalid word")
@@ -17,7 +17,11 @@ function POST(req,res){
     words.push(word)
     write("words",words)
     let info = read("info")
+    if(info.turn+1> game.length){
+        info.turn = 0
+    }
     info.turn = info.turn+1
+    write("info",info)
     res.json({
         ok: true,
         message: "Word added"

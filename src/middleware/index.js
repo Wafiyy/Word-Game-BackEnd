@@ -37,7 +37,7 @@ function isAdmin(req,res,next){
     id = Number(id)
 
     if(gameStatus) return reject("Game already started")
-    if(game?.[0].id !== id){
+    if(game?.[0]?.id !== id){
         return reject(res,"You are not admin")
     }
     next()
