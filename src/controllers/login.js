@@ -1,4 +1,4 @@
-const {read, reject, gameStatus} = require("../util");
+const {read, reject} = require("../util");
 
 function POST(req,res){
     let {username,password} = req.body
@@ -15,14 +15,14 @@ function POST(req,res){
     if(!user){
         return reject(res,"Username or password is incorrect")
     }
-
+    let info = read("info")
     user.avatar = "/avatar/"+user.avatar
     delete user.password
 
     res.json({
-        ok:"true",
+        ok:true,
         message:"ok",
-        gameStatus,
+        gameStatus: info.gameStatus,
         data: user
     })
 

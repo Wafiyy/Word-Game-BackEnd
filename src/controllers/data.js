@@ -10,8 +10,9 @@ function GET(req,res){
             ok: true,
             message: "ok",
             players: game,
-            turn: info.turn,
-            lastWord: words.at(-1)
+            turn: info.turn || null,
+            lastWord: words.at(-1),
+            admin: game?.[0].id
         })
     }
     catch {

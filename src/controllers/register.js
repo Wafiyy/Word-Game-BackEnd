@@ -1,5 +1,5 @@
 const multer = require("multer");
-const {imageFilter, read, write, reject, gameStatus} = require("../util");
+const {imageFilter, read, write, reject} = require("../util");
 const path = require("path");
 
 const storage = multer.diskStorage({
@@ -47,13 +47,13 @@ async function POST(req,res){
                 avatar
             }
             users.push(newUser)
-
+            let info = read("info")
             write("users",users)
             res.json({
                 ok:true,
                 message:  newUser.username+" successfully added",
                 id: newUser.id,
-                gameStatus
+                gameStatus: info.gameStatus
             })
         }
         catch (e){

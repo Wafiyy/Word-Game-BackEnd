@@ -6,6 +6,7 @@ function POST(req,res){
     word = word?.trim()
     id = +id
     let lastLetter = words.at(-1)?.slice(-1)
+    
     if( !word &&word === "") return reject(res, "please enter the word")
     if(lastLetter && lastLetter !== word.charAt(0)) {
         let game = read("game")
